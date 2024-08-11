@@ -1,10 +1,15 @@
 .App {
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body { 
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -24,6 +29,73 @@
   color: white;
 }
 
+.customer-list{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 400px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  position: sticky;
+  max-height: 100vh;
+  cursor: pointer;
+  overflow: scroll;
+}
+
+.error-box{
+  color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    margin-top: 1rem;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.skeleton-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.image-class {
+  width: 150px;
+  border-radius: 5px;
+  height: 150px;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.customer-list-item:hover, .customer-list-item-active{ 
+  background-color: #f9f9f9f9;
+  border-right: 1px solid black;
+}
+
+.customer-list-item {
+  padding: 10px;
+  cursor: pointer;
+  list-style: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: 0.25s all ease;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.customer-list-item h2 { 
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.customer-list h2, .customer-list p {
+  text-align: left;
+}
+
+
 .App-link {
   color: #61dafb;
 }
@@ -36,3 +108,14 @@
     transform: rotate(360deg);
   }
 }
+
+/* src/App.css */
+
+.App {
+  display: flex;
+}
+
+.customer-details {
+  width: 70%;
+}
+
