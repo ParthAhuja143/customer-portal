@@ -1,3 +1,13 @@
+# Instructions to run
+
+Please install npm before proceeding with the test. 
+
+Commands to run the project - 
+1. `npm install`.
+2. `npm run start`. 
+
+`NOTE: The project contains an access key from the Unsplash developers' account (personal free plan). The current API key limits the use of the API to 50 requests per hour, so the image fetching API might not work while testing due to rate limiting, I have added errors (403) to indicate that on the portal.`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
