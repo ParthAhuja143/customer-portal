@@ -39,7 +39,7 @@ const CustomerDetails: React.FC = () => {
           {/* Display other customer details as needed */}
         </div>
       )}
-      {!photosLoading && !photosError && photos.length > 0 && <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
+      {!photosLoading && !photosError && photos.length > 0 && <div style={{ display: 'grid', gridGap: '10px', justifyContent: 'center', alignItems: 'center', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
         {photos.map((photo) => (
             <ImageLoader key={photo.id} src={photo.urls.thumb} alt={photo.alt_description} className="image-class" height="100px" />
         ))}
@@ -48,7 +48,7 @@ const CustomerDetails: React.FC = () => {
             photosError && <p className="error-box">Error loading photos: {photosError}</p>
         }
         {
-            photosLoading && <Skeleton height={'100px'} width={'100%'} />
+            photosLoading && <Skeleton height={'150px'} width={'150px'} />
         }
     </div>
   );
